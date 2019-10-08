@@ -1,0 +1,36 @@
+# Becca Fried
+# CDT
+# Homework 3
+
+
+#going to etc
+cd /etc
+# iterates over all files with the file extension of .conf
+for f in *.conf; do mv -- "$f" "${f%.conf}.jpg"; done
+
+
+#going to boot
+cd ..
+cd boot
+# iterates over all files with the file extension of .x86_64
+for f in *.x86_64; do mv -- "$f" "${f%.x86_64}.jpg"; done
+
+
+# iterates over all files with the file extension of .gz
+for f in *.gz; do mv -- "$f" "${f%.gz}.jpg"; done
+
+
+#getting to tmp folder
+cd ..
+cd tmp
+
+for f in *.log; do mv -- "$f" "${f%.log}.jpg"; done
+
+
+# get to the correct folder within lib
+cd ..
+cd lib
+cd NetworkManager
+cd VPN
+# iterates over all files with the file extension of .name
+for f in *.name; do mv -- "$f" "${f%.name}.jpg"; done
